@@ -1,0 +1,20 @@
+<div *ngIf="imageslist.length > 0">
+    <div *ngFor="let img of imageListView">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title> Author: {{img.author}} </mat-card-title>
+                <mat-card-subtitle>Id: {{img.id}} </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src={{img.download_url}} alt="Photo">
+            <mat-card-content>
+                <p></p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="openLink(img.download_url)">VER</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <mat-paginator (page)="changePage($event)" [length]=Length [pageSize]=PageSize [pageSizeOptions]="[5, 10, 20]">
+    </mat-paginator>
+</div>
