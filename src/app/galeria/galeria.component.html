@@ -1,4 +1,6 @@
 <div *ngIf="imageslist.length > 0">
+    <input type="text" [(ngModel)]="filter">
+    <button (click)="getfilter()">BUSCAR</button>
     <div *ngFor="let img of imageListView">
         <mat-card class="example-card">
             <mat-card-header>
