@@ -22,6 +22,8 @@ export class GaleriaComponent implements OnInit {
   }
 
   listImages() {
+    this.imageslist = [];
+    this.imageListView = [];
     this.service.listImages().subscribe((res: any) => {
       console.log(res);
       this.imageslist = res;
@@ -44,18 +46,26 @@ export class GaleriaComponent implements OnInit {
       this.imageListView.push(this.imageslist[i]);
     }
   }
+
   getfilter(){
-    if(this.filter){
+    if (this.filter) {
+      this.imageslist = [];
+      this.imageListView = [];
       this.service.listImages().subscribe((res: any) => {
         console.log(res);
-        this.imageslist = res.filter(item => item.author == this.filter);
+        this.imageslist = res;
+        console.log(this.filter);
+        this.imageslist = this.imageslist.filter(item => item.author === this.filter);
+        console.log(this.imageslist);
         /* Se insertan las primeras imagenes a mostrar*/
         for (let i = 0; i < this.PageSize; i++){
+          if (i === this.imageslist.length) { break; }
           this.imageListView.push(this.imageslist[i]);
         }
         this.Length = this.imageslist.length;
       });
+    } else {
+      this.listImages();
     }
-
   }
 }

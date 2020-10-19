@@ -3,3 +3,19 @@
     border: 1px solid;
     margin: 1% 30%;
 }
+
+input {
+    background-color: darkblue;
+    color: white;
+    font-size: 20PX;
+    max-width: 25%;
+    margin: 1% 30%;
+}
+
+button {
+    margin: 1% 30%;
+}
+
+mat-paginator {
+    max-width: 100%;
+}

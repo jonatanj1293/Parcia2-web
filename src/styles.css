@@ -1,23 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #D6DBDF;}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #D6DBDF;
+}
+
 #menu {
     height: 50px;
-    width: 1298px;
-    background-color:#17202A;
+    width: 100%;
+    background-color: #17202A;
     padding: 25px;
     text-align: center;
     font-size: 3em;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    }
-#pie
-{
+}
+
+#pie {
     height: 50px;
-    width: 1298px;
-    background-color:#17202A;
+    width: 100%;
+    background-color: #17202A;
     padding: 25px;
     text-align: center;
     font-size: 1em;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    }
+}

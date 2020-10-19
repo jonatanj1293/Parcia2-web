@@ -1,10 +1,11 @@
 <div *ngIf="imageslist.length > 0">
-    <input type="text" [(ngModel)]="filter">
-    <button (click)="getfilter()">BUSCAR</button>
+    <input matInput type="text" placeholder="Filtro por Autor" [(ngModel)]="filter">
+    <br>
+    <button mat-raised-button color="primary" (click)="getfilter()">BUSCAR</button>
     <div *ngFor="let img of imageListView">
         <mat-card class="example-card">
             <mat-card-header>
-                <div mat-card-avatar class="example-header-image" ></div>
+                <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title> Author: {{img.author}} </mat-card-title>
                 <mat-card-subtitle>Id: {{img.id}} </mat-card-subtitle>
             </mat-card-header>
