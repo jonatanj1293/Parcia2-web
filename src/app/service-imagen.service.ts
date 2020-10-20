@@ -9,6 +9,6 @@ export class ServiceImagenService {
   constructor(private http:HttpClient) {}
 
   public listImages () {
-    return this.http.get('https://picsum.photos/v2/list');
+    return this.http.get('https://picsum.photos/v2/list?limit=100');
   } 
 }

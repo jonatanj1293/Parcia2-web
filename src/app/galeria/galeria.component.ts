@@ -52,11 +52,8 @@ export class GaleriaComponent implements OnInit {
       this.imageslist = [];
       this.imageListView = [];
       this.service.listImages().subscribe((res: any) => {
-        console.log(res);
         this.imageslist = res;
-        console.log(this.filter);
         this.imageslist = this.imageslist.filter(item => item.author === this.filter);
-        console.log(this.imageslist);
         /* Se insertan las primeras imagenes a mostrar*/
         for (let i = 0; i < this.PageSize; i++){
           if (i === this.imageslist.length) { break; }
